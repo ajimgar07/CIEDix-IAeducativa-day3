@@ -78,7 +78,7 @@ por enriba e debaixo. Isto é comportamento normal de Reveal, non un erro.
 ```
  1. Portada
  2. CIEDix · web embebida
- 3. I+D+i · CIEDix (o meu rol)
+ 3. I+D+i · CIEDix
  4. CIEDixlab · dúas vertentes (cloud + local)
  5. Cloud · servizos contratados (Google / AWS / Azure)
  6. Local · máquinas (Beast, DGX Spark, Jetson)
@@ -95,16 +95,17 @@ por enriba e debaixo. Isto é comportamento normal de Reveal, non un erro.
 13. Exemplo cloud · vídeo YouTube
 14. Bisagra · soberanía dixital vs cloud
 15. Exemplo local · asistente de voz
-16. Configuración Moodle · bloque Asistente de Voz
-17. Local · innovación + soberanía
-18. Local · atención á diversidade
-19. Datasets · pipeline de xeración
-20. Datasets · ¿por que este esforzo?
-21. Datasets · vídeo do proceso
-22. AMTEGA · colaboración interinstitucional
-23. Créditos · uso de IA neste traballo
-24. Miña pregunta ao público · QR
-25. Contraportada · GRAZAS + LinkedIn
+16. Esquema de configuración do plugin
+17. Configuración Moodle · bloque Asistente de Voz
+18. Local · innovación + soberanía
+19. Local · atención á diversidade
+20. Datasets · pipeline de xeración
+21. Datasets · ¿por que este esforzo?
+22. Datasets · vídeo do proceso
+23. AMTEGA · colaboración interinstitucional
+24. Créditos · uso de IA neste traballo
+25. Miña pregunta ao público · QR
+26. Contraportada · GRAZAS + LinkedIn
 ```
 
 **Mudanza respecto á estrutura inicial:** as preguntas do público foron adiantadas á slide 11 (xusto tras as constatacións e antes dos exemplos), para que o público poida formular preguntas mentres se presentan os exemplos. O QR flotante superior-dereito acompaña todas as slides posteriores.
