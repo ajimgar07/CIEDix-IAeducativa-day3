@@ -222,25 +222,6 @@ Todo o texto duplícase con `.lang-gl` e `.lang-es`:
 
 ---
 
-## Tempos estimados (50 min efectivos + 10 min preguntas)
-
-| Bloque                                  | Slides   | Tempo |
-|-----------------------------------------|----------|-------|
-| Portada + CIEDix + rol                  | 1–3      | 3 min |
-| Arquitectura + cloud + local + filosofía| 4–7      | 8 min |
-| Normativa + matriz LLMs                 | 8–9      | 5 min |
-| Constatacións                           | 10       | 3 min |
-| **Apertura de preguntas do público**    | **11**   | 2 min |
-| Exemplos cloud + local                  | 12–18    | 15 min|
-| Datasets                                | 19–21    | 8 min |
-| AMTEGA + créditos                       | 22–23    | 4 min |
-| Miña pregunta + peche                   | 24–25    | 10 min|
-
-**Total ≈ 58 min.** Deixa 2 min de marxe.
-
-As preguntas recollidas durante os exemplos respóndense na última parte, ou intercaladas nos cortes naturais entre bloques.
-
----
 
 ## Tipografía
 
@@ -280,3 +261,4 @@ Conversión de XuntaSansMono de OTF a WOFF2 feita co paquete `fonttools`. A lice
 ## Contacto
 
 Alfonso Jiménez García · CIEDix · Consellería de Educación, Ciencia, Universidades e FP · Xunta de Galicia.
+alfonso.jimenez.garcia@xunta.gal
