@@ -114,7 +114,7 @@ por enriba e debaixo. Isto é comportamento normal de Reveal, non un erro.
 
 ## Personalización antes da ponencia
 
-### 1 · URL do formulario Nextcloud (preguntas do público)
+### 1 · URL do formulario Nextcloud (preguntas do público en BoxAbalar)
 
 Abre `index.html` e localiza preto do principio:
 
@@ -181,20 +181,6 @@ Na túa instancia:
 5. **Durante a ponencia:** abre o panel *Responses* nunha segunda xanela/tableta para ir vendo as preguntas en vivo. O refresco de Nextcloud Forms é manual; se queres polling automático instala a app *Forms → Results auto-refresh* ou abre o panel noutro dispositivo coa páxina recargando cada pouco.
 
 **Nota:** ningún dato sae da túa infraestrutura. Coherente co discurso da ponencia.
-
----
-
-## Exportar a PDF (respaldo)
-
-Reveal.js ten modo impresión:
-
-```
-http://localhost:8000/?print-pdf
-```
-
-Ctrl+P → *Save as PDF* · Layout *Landscape* · Margins *None* · Background graphics ✓
-
-**Limitación:** vídeos e iframes non se renderizan; útil só como backup.
 
 ---
 
