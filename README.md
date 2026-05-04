@@ -263,3 +263,4 @@ Conversión de XuntaSansMono de OTF a WOFF2 feita co paquete `fonttools`. A lice
 
 Alfonso Jiménez García · CIEDix · Consellería de Educación, Ciencia, Universidades e FP · Xunta de Galicia.
 alfonso.jimenez.garcia@xunta.gal
+alfonso.jimenez.garcia@edu.xunta.gal
