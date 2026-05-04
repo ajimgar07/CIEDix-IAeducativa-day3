@@ -73,7 +73,7 @@ por enriba e debaixo. Isto é comportamento normal de Reveal, non un erro.
 
 ---
 
-## Ordem da presentación (25 slides)
+## Orde da presentación (26 slides)
 
 ```
  1. Portada
