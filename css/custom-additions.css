@@ -1,0 +1,277 @@
+/* ========================================================================
+   CIEDixlab — custom-additions.css  (v3 · day-3 fixes)
+   Cargado DESPOIS de css/custom.css.
+   ======================================================================== */
+
+
+/* ============================================================
+   1) SLIDE 2 · Centro de Innovación Educativa e Dixital
+   ------------------------------------------------------------
+   Foto de equipa SEN recortes (object-fit: contain).
+   Aspect-ratio fixo igual ao da foto orixinal (1280×1015).
+   Texto compacto para que TODO o contido caiba na slide.
+   ============================================================ */
+.slide-ciedix .ciedix-row {
+    display: grid !important;
+    grid-template-columns: 1.05fr 1fr !important;
+    gap: 36px !important;
+    margin-top: 18px !important;
+    align-items: center !important;
+    flex: 1 1 auto;
+    min-height: 0;
+}
+
+/* Tipografía compacta só para esta slide para garantir que cabe todo */
+.slide-ciedix .ciedix-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+    min-width: 0;
+}
+.slide-ciedix .ciedix-text p {
+    font-size: 0.74em !important;
+    line-height: 1.45 !important;
+    padding: 12px 18px !important;
+    margin: 0 !important;
+}
+.slide-ciedix .ciedix-text p.lead {
+    font-size: 0.82em !important;
+    line-height: 1.45 !important;
+    padding: 14px 20px !important;
+    margin: 0 !important;
+}
+
+/* Caixa da foto: aspect-ratio fixo, contén totalmente a foto. */
+.slide-ciedix .ciedix-photo {
+    width: 100%;
+    aspect-ratio: 1280 / 1015;
+    max-height: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+    background: #f5f5f5;
+}
+.slide-ciedix .ciedix-photo .ciedix-team-photo,
+img.ciedix-team-photo {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 14px !important;
+    background: #f5f5f5;
+}
+
+/* Enlaces "CIEDix" dentro do texto */
+.reveal a.ciedix-link {
+    color: var(--c-accent);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--c-accent);
+    transition: color 120ms ease, border-color 120ms ease;
+}
+.reveal a.ciedix-link:hover,
+.reveal a.ciedix-link:focus-visible {
+    color: var(--c-accent-2);
+    border-bottom-color: var(--c-accent-2);
+    outline: none;
+}
+
+
+/* ============================================================
+   2) SLIDE 13 · Thumbnail de vídeo (link á YouTube + JS overlay)
+   ------------------------------------------------------------
+   - É un <a> con href á YouTube → fallback se falla o JS.
+   - Tamaño de SVG en píxeles fixos para evitar conflictos
+     con regras globais de aspect-ratio ou width: 100%.
+   ============================================================ */
+.video-thumb {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    aspect-ratio: 16 / 9 !important;
+    background: #ffffff !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    border: 0 !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.32) !important;
+    transition: transform 220ms ease, box-shadow 220ms ease;
+}
+.video-thumb:hover,
+.video-thumb:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.40) !important;
+    outline: none;
+}
+.video-thumb:focus-visible {
+    box-shadow: 0 0 0 3px var(--c-accent-2),
+                0 12px 28px rgba(0, 0, 0, 0.40) !important;
+}
+img.video-thumb-poster {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    background: #ffffff !important;
+    margin: 0 !important;
+    padding: 18px !important;
+    box-sizing: border-box !important;
+    display: block !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+}
+svg.video-thumb-play {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 120px !important;
+    height: 120px !important;
+    max-width: 120px !important;
+    max-height: 120px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: translate(-50%, -50%) !important;
+    pointer-events: none !important;
+    filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.45));
+    z-index: 2 !important;
+    transition: transform 200ms ease;
+}
+.video-thumb:hover svg.video-thumb-play,
+.video-thumb:focus-visible svg.video-thumb-play {
+    transform: translate(-50%, -50%) scale(1.06) !important;
+}
+
+
+/* ============================================================
+   3) SLIDE 15 · Caixa "¿Que é Piper?"
+   ============================================================ */
+.piper-note {
+    margin-top: 14px;
+    background: rgba(255, 255, 255, 0.78) !important;
+    border-left: 4px solid var(--c-accent-2);
+    border-radius: 8px;
+    padding: 14px 18px !important;
+    font-size: 0.78em;
+    line-height: 1.5;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08) !important;
+}
+.piper-note strong { color: var(--c-ink); }
+
+
+/* ============================================================
+   4) SLIDE 17 · Captura Moodle pode desbordar a franxa inferior
+   ============================================================ */
+.slide-overflow-bottom {
+    padding-bottom: 30px !important;
+    overflow: visible !important;
+}
+.screenshot-overflow {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    height: 100%;
+}
+.screenshot.screenshot-tall {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    border-radius: 10px;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+    object-fit: contain;
+    object-position: top center;
+    position: relative;
+    z-index: 20;
+}
+
+
+/* ============================================================
+   5) CONTADOR DE SLIDE · esquina inferior esquerda
+   ------------------------------------------------------------
+   Especificidade alta + reforzo en JS (vexa app.js) para que
+   non sexa sobreescrito por outras reglas !important.
+   ============================================================ */
+html body .reveal .slide-number,
+.reveal-viewport .reveal .slide-number,
+.reveal-viewport > .reveal .slide-number,
+.reveal .slide-number {
+    position: fixed !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: 12px !important;
+    left: 16px !important;
+    inset: auto auto 12px 16px !important;
+    background: rgba(0, 0, 0, 0.55) !important;
+    color: #ffffff !important;
+    font-family: var(--f-mono);
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.06em !important;
+    padding: 5px 12px !important;
+    border-radius: 999px !important;
+    z-index: 30 !important;
+    pointer-events: auto !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+    width: auto !important;
+    height: auto !important;
+}
+.reveal .slide-number a,
+.reveal .slide-number a:visited {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+.reveal .slide-number .slide-number-delimiter {
+    opacity: 0.7;
+    margin: 0 2px;
+}
+
+@media print {
+    .reveal .slide-number { display: none !important; }
+}
+
+
+/* ============================================================
+   6) RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+    .slide-ciedix .ciedix-row {
+        grid-template-columns: 1fr !important;
+        gap: 18px !important;
+    }
+    .slide-ciedix .ciedix-photo {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    .slide-ciedix .ciedix-text p { font-size: 0.92em !important; }
+    .slide-ciedix .ciedix-text p.lead { font-size: 1em !important; }
+
+    svg.video-thumb-play {
+        width: 80px !important;
+        height: 80px !important;
+        max-width: 80px !important;
+        max-height: 80px !important;
+    }
+    .piper-note { font-size: 0.85em; }
+    .slide-overflow-bottom { padding-bottom: 20px !important; }
+    .screenshot.screenshot-tall { max-height: 60vh; }
+
+    .reveal .slide-number {
+        bottom: 8px !important;
+        left: 10px !important;
+        font-size: 11px !important;
+        padding: 3px 9px !important;
+        inset: auto auto 8px 10px !important;
+    }
+}

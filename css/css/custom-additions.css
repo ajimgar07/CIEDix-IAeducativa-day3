@@ -1,0 +1,226 @@
+/* ========================================================================
+   CIEDixlab — custom-additions.css
+   Estilos para os cambios solicitados. Cargase DESPOIS de custom.css
+   desde index.html, polo que sobrescribe regras previas onde proceda.
+   ======================================================================== */
+
+
+/* -----------------------------------------------------------
+   1) SLIDE 2 · CIEDix con logo institucional + enlace
+   ----------------------------------------------------------- */
+.ciedix-row {
+    align-items: stretch !important;
+}
+.ciedix-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+}
+.ciedix-logo-wrap {
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.22);
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.ciedix-logo-wrap a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+.ciedix-logo-wrap img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Enlace "CIEDix" dentro do texto: usa o estilo accent + subliñado punteado */
+.reveal a.ciedix-link {
+    color: var(--c-accent);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--c-accent);
+    transition: color 120ms ease, border-color 120ms ease;
+}
+.reveal a.ciedix-link:hover,
+.reveal a.ciedix-link:focus-visible {
+    color: var(--c-accent-2);
+    border-bottom-color: var(--c-accent-2);
+    outline: none;
+}
+/* Enlace que envolve o logo: sen subliñado nin marca visual */
+.ciedix-logo-wrap a.ciedix-link {
+    border-bottom: none;
+}
+.ciedix-logo-wrap a.ciedix-link:focus-visible {
+    outline: 3px solid var(--c-accent-2);
+    outline-offset: 4px;
+    border-radius: 8px;
+}
+
+
+/* -----------------------------------------------------------
+   2) SLIDE 13 · Thumbnail de vídeo con icona Play
+   ----------------------------------------------------------- */
+.video-thumb {
+    cursor: pointer;
+    position: relative;
+}
+.video-thumb .video-poster {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    background: #ffffff;
+    transition: transform 300ms ease, filter 300ms ease;
+}
+.video-thumb:hover .video-poster,
+.video-thumb:focus-visible .video-poster {
+    transform: scale(1.02);
+    filter: brightness(0.92);
+}
+.video-thumb .video-play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14%;
+    min-width: 64px;
+    max-width: 110px;
+    aspect-ratio: 1 / 1;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: transform 200ms ease;
+    filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.45));
+}
+.video-thumb .video-play-icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.video-thumb:hover .video-play-icon,
+.video-thumb:focus-visible .video-play-icon {
+    transform: translate(-50%, -50%) scale(1.08);
+}
+.video-thumb:focus-visible {
+    outline: 3px solid var(--c-accent-2);
+    outline-offset: 3px;
+}
+
+
+/* -----------------------------------------------------------
+   3) SLIDE 15 · Caixa "¿Que é Piper?"
+   ----------------------------------------------------------- */
+.piper-note {
+    margin-top: 14px;
+    background: rgba(255, 255, 255, 0.75) !important;
+    border-left: 4px solid var(--c-accent-2);
+    border-radius: 8px;
+    padding: 14px 18px !important;
+    font-size: 0.78em;
+    line-height: 1.5;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08) !important;
+}
+.piper-note strong {
+    color: var(--c-ink);
+}
+
+
+/* -----------------------------------------------------------
+   4) SLIDE 17 · Imaxe de configuración Moodle desbordando
+      sobre a franxa institucional inferior.
+   ----------------------------------------------------------- */
+.slide-overflow-bottom {
+    /* Reducimos o padding inferior para que a imaxe poida estenderse
+       máis abaixo. A franxa segue ahí (z-index 10), pero a imaxe
+       (z-index 20) pasa por enriba. */
+    padding-bottom: 30px !important;
+    overflow: visible !important;
+}
+.screenshot-overflow {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    height: 100%;
+}
+.screenshot.screenshot-tall {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    border-radius: 10px;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+    object-fit: contain;
+    object-position: top center;
+    position: relative;
+    z-index: 20;
+}
+
+
+/* -----------------------------------------------------------
+   5) CONTADOR DE SLIDE · esquina inferior esquerda
+   ----------------------------------------------------------- */
+/* Reposiciona o contador (xa activado por slideNumber:'c/t' en app.js)
+   a abaixo-esquerda, sobre a franxa institucional. Branco para
+   contraste sobre o gris escuro (#3C3C3A). */
+.reveal .slide-number {
+    position: fixed !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: 12px !important;
+    left: 16px !important;
+    background: rgba(0, 0, 0, 0.45);
+    color: #ffffff !important;
+    font-family: var(--f-mono);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 5px 12px;
+    border-radius: 999px;
+    z-index: 30;
+    pointer-events: auto;
+}
+.reveal .slide-number a,
+.reveal .slide-number a:visited {
+    color: #ffffff !important;
+    text-decoration: none;
+}
+.reveal .slide-number .slide-number-delimiter {
+    opacity: 0.7;
+    margin: 0 2px;
+}
+
+@media print {
+    .reveal .slide-number { display: none !important; }
+}
+
+
+/* -----------------------------------------------------------
+   6) RESPONSIVE · axustes para mobile dos novos elementos
+   ----------------------------------------------------------- */
+@media (max-width: 900px) {
+    .ciedix-logo-wrap { padding: 14px; min-height: 180px; }
+    .video-thumb .video-play-icon { min-width: 52px; }
+    .piper-note { font-size: 0.85em; }
+    .slide-overflow-bottom { padding-bottom: 20px !important; }
+    .screenshot.screenshot-tall { max-height: 60vh; }
+
+    .reveal .slide-number {
+        bottom: 8px !important;
+        left: 10px !important;
+        font-size: 11px;
+        padding: 3px 9px;
+    }
+}
