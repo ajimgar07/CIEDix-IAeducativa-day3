@@ -281,9 +281,9 @@ html body .reveal .slide-number,
    ============================================================ */
 #slide-voice-diagram .voice-diagram-wrap {
     margin-top: 14px;          /* menos aire arriba */
-    margin-left: -40px;        /* desbordamos lixeiramente cara aos lados */
-    margin-right: -40px;
-    width: calc(100% + 80px);
+    margin-left: -80px;        /* desbordamos lixeiramente cara aos lados */
+    margin-right: -80px;
+    width: calc(100% + 160px);
 }
 #slide-voice-diagram .voice-diagram-wrap svg {
     width: 100% !important;
