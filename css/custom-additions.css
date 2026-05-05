@@ -275,3 +275,27 @@ html body .reveal .slide-number,
         inset: auto auto 8px 10px !important;
     }
 }
+
+css/* ============================================================
+   SLIDE 16 · Diagrama de voz máis grande
+   ============================================================ */
+#slide-voice-diagram .voice-diagram-wrap {
+    margin-top: 14px;          /* menos aire arriba */
+    margin-left: -40px;        /* desbordamos lixeiramente cara aos lados */
+    margin-right: -40px;
+    width: calc(100% + 80px);
+}
+#slide-voice-diagram .voice-diagram-wrap svg {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+}
+/* Reducir o tamaño do título e a etiqueta para gañar altura ao SVG */
+#slide-voice-diagram h2 {
+    font-size: 1.6em !important;
+    margin-bottom: 6px !important;
+}
+#slide-voice-diagram .eyebrow {
+    margin-bottom: 4px !important;
+}
